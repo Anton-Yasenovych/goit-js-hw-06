@@ -13,16 +13,17 @@ const counter = {
 
 const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
 const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
-const valueElem = document.querySelector("#value");
+const counterValue = document.querySelector("#value");
 
-decrementBtn.addEventListener("click", function(){
-    console.log('Кликнул "-"');
-    counter.decrement();
-});
-incrementBtn.addEventListener("click", function(){
-    console.log('Кликнул "+"');
-    counter.increment();
-});
+    decrementBtn.addEventListener("click", () => {
+        counter.decrement();
+       value.textContent = counter.value;
+    });
+    incrementBtn.addEventListener("click", () => {
+        counter.increment();
+       value.textContent = counter.value;
+    }); 
+
 
 
  
