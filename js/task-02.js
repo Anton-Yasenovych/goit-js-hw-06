@@ -7,5 +7,29 @@ const ingredients = [
   'Condiments',
 ];
 
-const getListEl = document.querySelector("#ingredients");
-const creatElemList=document.createElement("li").textContent();
+const list = document.querySelector("#ingredients");
+
+const makeNewsItemsList = (elementList)=>{
+return elementList.map((ingred) => {
+    const newItemList = document.createElement("li");
+    newItemList.textContent = ingred;
+    newItemList.classList.add("item");
+   return newItemList;
+    })
+};
+
+const ingredientsList = makeNewsItemsList(ingredients);
+list.append(...ingredientsList);
+
+
+  
+
+  
+
+
+
+
+
+    
+
+      
